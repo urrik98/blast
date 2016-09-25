@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
+gem 'bcrypt', '3.1.11'
+
 gem 'bootstrap-sass', '3.3.6'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -35,6 +37,13 @@ group :development, :test do
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+end
+
+group :test do
+  gem 'rails-controller-testing', '0.1.1'
+  gem 'minitest-reporters',       '1.1.9'
+  gem 'guard',                    '2.13.0'
+  gem 'guard-minitest',           '2.4.4'
 end
 
 group :development do
